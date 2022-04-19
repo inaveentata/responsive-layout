@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald:wght@400;500;700&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* font-family: 'Montserrat', sans-serif;
+font-family: 'Oswald', sans-serif; */
+
+
+header {
+    background-color: #2e323f;
+    padding: 1em ;
+    position: relative;
+}
+
+.header-container {
+   margin: 0 auto;
+   width: 90%;font-family: 'Montserrat', sans-serif;
+   max-width: 1200px;
+}
+
+.hamburger{
+    color: #fff;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    font-size: 1rem;
+    background-color: #6f737f88;
+    padding: 0.5em 0.75em;
+    border-radius: 2em;
+    cursor: pointer;
+}
+
+.hamburger:hover,
+.hamburger:focus{
+    opacity: 0.65;
+}
+
+
+nav{
+    visibility: hidden;
+    height: 0;
+    position: absolute;
+}
+
+.nav__links{
+    list-style: none;
+}
+
+.nav__items{
+    padding: .5em 0;
+    text-align: center;
+}
+
+.nav__items a{
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.nav__links--primary{
+    margin-bottom: 2em;
+}
+
+.nav__items:hover{
+    background-color: rgba(255, 255, 255, 0.062);
+}
+
+.nav__items--button{
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    background-color: #a59678;
+    text-transform: uppercase;
+    padding: 0.2em 1em;
+    border-radius: 3em;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* toggle */
+.nav--visible{
+    visibility: visible;
+    height: auto;
+    position: relative;
+}
+
+
+
+
+section {
+    padding: 2em 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4em 0;
+}
+
+.section-one,
+.section-four {
+    background-color: #3b4050;
+    color: #fff;
+}
+
+.title{
+    font-family: 'Oswald', sans-serif;
+    color: #fff;
+    font-size: 30px;
+    line-height: 1.1;
+
+}
+
+.title__dark {
+    color: #a59678;
+}
+
+.text--btn p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    padding: 2em 0;
+}
+
+.text--btn button {
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #a59678;
+    text-transform: uppercase;
+    padding: 0.2em 1em;
+    border-radius: 3em;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.text--btn button:hover,
+.text--btn button:focus{
+    background-color: #a59678b9;
+}
+/* end of section one */
+
+
+.section-two {
+    color: black;
+    background-color: #e7e7e7;
+}
+
+h2{
+    font-family:'Oswald', sans-serif;
+}
+
+p{
+    font-family: 'Montserrat', sans-serif; 
+}
+.section-two h2{
+    color: #a59678;
+    font-size: 24px;
+}
+
+.section-two p {
+    font-size: 16px;
+}
+
+
+/* will be change in media query */
+.col + .col {
+    margin-top: 1.5em;
+}
+/* end of section two */
+
+
+
+.section-three h2 {
+    font-size: 32px;
+}
+
+.section-three p{
+    font-size: 18px;
+}
+.section-three__img{
+    max-width: 100%;
+}
+
+.aside .col {
+    background-color: #2e323f;
+    color: #fff;
+    padding: 1em;
+}
+
+.aside h2 {
+    font-size: 28px;
+}
+
+.aside p {
+    font-size: 17px;
+}
+/* end of section three */
+
+
+.section-four .last__title{
+    color: #fff;
+    font-size: 34px;
+    text-align: center;
+}
+
+.section-four h2{
+    color: #a59678;
+    font-size: 21px;
+}
+
+.section-four ul {
+    list-style: none;
+}
+
+.section-four li{
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+
+
+@media (min-width:1000px){
+    .hamburger{
+        display: none;
+    }
+
+    nav{
+        visibility: visible;
+        height: auto;
+        position: relative;
+
+        display: flex;
+        margin-left: auto;
+    }
+
+    .header-container {
+        display: flex;
+        align-items: center;
+    }
+
+   
+    .nav__links{
+        display: flex;
+    }
+
+    .nav__items + .nav__items{
+        margin-left: 1em;
+    }
+
+    .nav__links--primary{
+        margin: 0 3em 0 0;
+    }
+
+    .title {
+        font-size: 45px;
+    }
+
+    .aside{
+        display: flex;
+    }
+
+
+    .aside .col + .col{
+        margin: 0 0  0 1em ;
+    }
+}
+
+@media (min-width: 1200px){
+
+    body{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .title {
+        font-size: 60px;
+    }
+    .row{
+        display: flex;
+    }
+
+    .section-three__aside{
+        width: 60%;
+    }
+
+    .aside{
+        width: 30%;
+        flex-direction: column;
+    }
+
+    .aside .col + .col{
+        margin: 2em 0 0 0;
+    }
+
+    .section-four__left{
+        width: 35%;
+        justify-self: flex-start;
+    }
+
+    .section-four__right{
+        width: 55%;
+        display: flex;
+        justify-content: space-between;
+        margin-left: auto;
+    }
+
+    .col + .col{
+        margin: 0;
+    }
+
+    p{
+        padding: 1em 0;
+    }
+
+    .section-one .col + .col,
+    .section-two .col + .col {
+        margin-left: 2em;
+    }
+}
